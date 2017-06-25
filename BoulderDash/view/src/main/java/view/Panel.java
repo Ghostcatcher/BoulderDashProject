@@ -37,7 +37,6 @@ public class Panel extends JPanel implements Observer {
 				//g.drawImage(model.getMap().getTable()[j][i].getImage().getSubimage(0, 0, 16, 16), j*16, i*16, this);
 			}
 		}
-		
 	}
 	
 	
@@ -52,7 +51,8 @@ public class Panel extends JPanel implements Observer {
 	
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
+		
+		this.repaint();
 		
 	}
 }
