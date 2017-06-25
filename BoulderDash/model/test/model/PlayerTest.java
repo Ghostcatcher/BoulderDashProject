@@ -41,7 +41,7 @@ public class PlayerTest {
 	}
 
 	/**
-	 *     Method MovementTest to make the player move
+	 *     Method MovementTest to verify if the player move
 	 */
 	@Test
 	public void MovementTest() {

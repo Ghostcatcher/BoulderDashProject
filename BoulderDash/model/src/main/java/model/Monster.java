@@ -8,6 +8,8 @@ import view.ShowSprite;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
+ * 
+ * A class that will define the physic/AI of the monsters
  */
 public class Monster extends Character{
 	Map mapLevel = new Map();
@@ -17,7 +19,7 @@ public class Monster extends Character{
 	}
 
 	/**
-	 * Move the monster with a specific IA depending of his id            
+	 * Move the monster with a specific AI depending of his id            
 	 */
 
 	public void MovementIA() throws InterruptedException{

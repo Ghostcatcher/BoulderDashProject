@@ -2,6 +2,15 @@ package model;
 
 import model.dao.Connection;
 
+/**
+ * <h1>The Class Map</h1>
+ *
+ * @author Hugo, Théo, Eva and Geoffrey
+ * @version 1.0
+ * 
+ * A class that creates another 2d table and fills it with data from the database
+ */
+
 public class Map implements IMap{
 	private IElement[][] mapLevel;
 	static private int line = 40;
@@ -12,7 +21,13 @@ public class Map implements IMap{
 		this.fillMapLevel();
 	}
 	
-		public void fillMapLevel(){
+	
+	/**
+	* 
+	* The methods that fills the second 2d table with data from the first one
+	* 
+	*/
+	public void fillMapLevel(){
 			
 		Connection connect = new Connection();
 		this.mapLevel = new Element[line][colomn];

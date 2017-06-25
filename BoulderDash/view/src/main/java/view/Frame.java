@@ -9,6 +9,8 @@ import model.IModel;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
+ * 
+ * A class to create a frame for the user
  */
 
 

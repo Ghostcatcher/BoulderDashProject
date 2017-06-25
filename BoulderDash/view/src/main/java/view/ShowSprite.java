@@ -41,7 +41,7 @@ public class ShowSprite extends JFrame implements IShowSprite{
 		this.position = position;
 	}
 	/**
-     * Show a sprite
+     * A method that will add objects to the panel
      * 
      * @param g
      *            Graphic object to paint on a component

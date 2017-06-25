@@ -12,6 +12,8 @@ import model.IModel;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
+ * 
+ * A class that will display a panel for the user
  */
 
 public class Panel extends JPanel implements Observer {
@@ -22,6 +24,14 @@ public class Panel extends JPanel implements Observer {
 		this.model = model;
 	}
 	
+	
+	/** 
+	 * 
+	 * A method that will add objects to the panel
+	 *
+	 *@param g 
+	 *				 a Graphics object that stores informations needed for basic rendering operations 
+	 */
 	public void paintComponent(Graphics g){
 		
 		for(int i = 0; i < 40; i++){
