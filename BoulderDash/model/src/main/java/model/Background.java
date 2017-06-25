@@ -15,6 +15,7 @@ import java.awt.Point;
 	}
 
 //
+	//eva test
 //	//add the background sprite
 //	//background visible
 //	
