@@ -7,6 +7,8 @@ import java.awt.Point;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
+ * 
+ * A background class to set the image to the corresponding sprite (here the background)
  */
 
 public class Background extends Static {

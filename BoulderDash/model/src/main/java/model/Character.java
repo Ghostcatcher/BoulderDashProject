@@ -7,6 +7,7 @@ import java.awt.Point;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
+ * 
  */
 
 public class Character extends Mobile {
