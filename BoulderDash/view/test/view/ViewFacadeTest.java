@@ -10,6 +10,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+/**
+ * <h1>The Class ViewFacadeTest</h1>
+ *
+ * @author Hugo, Théo, Eva and Geoffrey
+ * @version 1.0
+ * 
+ * A test class to test the display of a message
+ */
+
 public class ViewFacadeTest {
 
 	@BeforeClass

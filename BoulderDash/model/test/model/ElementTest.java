@@ -9,6 +9,15 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * <h1>The Class ElementTest</h1>
+ *
+ * @author Hugo, Théo, Eva and Geoffrey
+ * @version 1.0
+ *     
+ *     Class ElementTest to do a test on the Element class
+ */
+
 public class ElementTest {
 	
 	BufferedImage image;
@@ -26,6 +35,10 @@ public class ElementTest {
 
 	}
 
+	/**
+	 *     A test method to get the image
+	 */
+	
 	@Test
 	public void testGetImage() {
 		final Element element = new Element(1); 
@@ -38,6 +51,10 @@ public class ElementTest {
 		this.image = image;
 	}
 
+	/**
+	 *     A test method to get the id of the element
+	 */
+	
 	@Test
 	public void testGetId() {
 		final Element element = new Element(1); 
@@ -45,12 +62,14 @@ public class ElementTest {
 		assertEquals(expected, element.getId());
 	}
 	
-
+	/**
+	 *     A test method to verify the id of the sprite used
+	 */
+	
 	@Test
 	public void idSpriteTest() throws IOException{
 		final Element element = new Element(1); 
 		int expected = 1;
 		equals(element.idSprite(expected));
 	}
-
 }

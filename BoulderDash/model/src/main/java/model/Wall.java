@@ -2,7 +2,13 @@ package model;
 
 import java.awt.Point;
 
-//
+/**
+ * <h1>The Class Wall </h1>
+ *
+ * @author Hugo, Théo, Eva and Geoffrey
+ * @version 1.0
+ */
+
 public class Wall extends Static {
 
 	public Wall(int id, Point position) {

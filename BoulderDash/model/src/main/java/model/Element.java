@@ -50,35 +50,35 @@ public class Element implements IElement {
 		switch (id)
 		{
 		case 1:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(16, 128, 16, 16);
 			break;
 		case 2:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(0, 128, 16, 16);
 			break;
 		case 3:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(48, 128, 16, 16);
 			break;
 		case 4:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(64, 128, 16, 16);
 			break;
 		case 5:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\player.png"));
 			this.image = img.getSubimage(32, 0, 16, 16);
 			break; 
 		case 6:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(144, 128, 16, 16);
 			break;
 		case 7:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(160, 128, 16, 16);
 			break;
 		case 8:
-			this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+			this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
 			this.image = img.getSubimage(32, 128, 16, 16);
 			break;
 		}

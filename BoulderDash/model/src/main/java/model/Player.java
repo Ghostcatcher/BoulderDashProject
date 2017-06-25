@@ -19,7 +19,7 @@ public class Player extends Character implements IController {
 	}
 	
 	/**
-	 * Move the player in the map
+	 * A method to move the player in the map according to the different keypressed
 	 * 
 	 * @param e
 	 *            This event occurs when a key press is followed by a key release       
