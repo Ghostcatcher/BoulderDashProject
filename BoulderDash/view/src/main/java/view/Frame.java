@@ -13,20 +13,27 @@ import model.IModel;
 
 
 public class Frame extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8716106488637881630L;
 	private Panel panel;
 	
 
 /**
  * Creates a new frame with a static size and a panel that has the size of the frame
+ * 
+ * @param model
+ * 				The model 
  */
 	
 	public Frame(IModel model){
 		this.setTitle("Boulderdash");
-		this.setSize(680,430);
+		this.setSize(680,420);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
-		this.setResizable(true);
+		this.setResizable(false);
 		
 		panel = new Panel(model);
 		this.setContentPane(panel);
