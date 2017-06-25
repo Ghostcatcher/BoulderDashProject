@@ -19,8 +19,8 @@ public class Element implements IElement {
 	
 	public Element(int id) throws IOException{
 		this.id = id;
-		this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\blocks.png"));
-		this.image = img.getSubimage(0, 0, 16, 16);
+		this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
+		this.image = img.getSubimage(32, 0, 16, 16);
 		
 		
 		

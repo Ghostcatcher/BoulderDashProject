@@ -19,9 +19,9 @@ public class Map implements IMap{
 		this.mapLevel = new Element[50][50];
 		int[][] table = new int[line][colomn];
 		table = connect.getMapByLevelId(levelId, table);
-		for(int i = 0; i < line; i++){
+		for(int i = 0; i <= line; i++){
 			for(int j = 0; j < colomn; j++){
-				mapLevel[j][i] = new Element(1);
+				mapLevel[i][j] = new Element(1);
 			}	
 		}
 	}
