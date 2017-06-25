@@ -29,7 +29,7 @@ public class Player extends Character implements IController {
 		Point p = getPosition().getLocation();
 		switch (e.getKeyCode()){
 		case KeyEvent.VK_RIGHT:
-			if(mapLevel.getValue(p.x+1, p.y).getId() != 2){
+			if(mapLevel.getValue(p.x+1, p.y).getValue() != 2){
 				new ShowSprite(1,32,128,p);
 				getPosition().setLocation(p.x+1, p.y);
 				new ShowSprite(2,48,64, p); 
