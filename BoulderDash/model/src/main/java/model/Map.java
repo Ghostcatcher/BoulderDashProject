@@ -5,7 +5,7 @@ import model.dao.Connection;
 public class Map implements IMap{
 	private IElement[][] mapLevel;
 	static private int line = 40;
-	static private int colomn = 22;
+	static private int colomn = 23;
 	static private int levelId = 1;
 	
 	public Map(){
