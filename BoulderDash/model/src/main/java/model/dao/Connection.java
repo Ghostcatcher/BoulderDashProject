@@ -18,8 +18,8 @@ public class Connection {
 			Statement statement = (Statement) ((java.sql.Connection) connection).createStatement();
 			ResultSet result = statement.executeQuery("CALL getMap1");
 
-			for (int x = 0; x < 22; x++){
-				for (int y = 0; y < 40; y++) {
+			for (int x = 0; x < 40; x++){
+				for (int y = 0; y < 22; y++) {
 					result.next();
 					int res = result.getInt(1);
 					//TEST DISPLAY VALUE

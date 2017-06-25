@@ -22,7 +22,7 @@ public class Frame extends JFrame {
 	
 	public Frame(IModel model){
 		this.setTitle("Window");
-		this.setSize(640,480);
+		this.setSize(720,480);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
