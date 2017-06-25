@@ -26,7 +26,7 @@ public class Frame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
-		this.setResizable(false);
+		this.setResizable(true);
 		
 		panel = new Panel(model);
 		this.setContentPane(panel);

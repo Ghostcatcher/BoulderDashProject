@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 package model.dao;
 
 import java.sql.DriverManager;
@@ -36,5 +40,8 @@ public class Connection {
 		}
 		return resultTab;
 	}
+<<<<<<< HEAD
 }
-
+=======
+}
+>>>>>>> origin/master
