@@ -11,17 +11,15 @@ public class Connection {
 	private String                  password = "";
 	private String                  url      = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
 
-	
-	//aaaaaaaa
+
 	public int map [][] = new int [40][22];
 	public int[][] getMapByLevelId (int idLevel, int resultTab[][]){
 		try{
 			java.sql.Connection connection = (java.sql.Connection) DriverManager.getConnection(this.url, this.user, this.password);
 			Statement statement = (Statement) ((java.sql.Connection) connection).createStatement();
 			ResultSet result = statement.executeQuery("CALL getMap1");
-
-			for (int x = 0; x < 40; x++){
-				for (int y = 0; y < 22; y++) {
+			for (int y = 0; y < 22; y++) {
+				for (int x = 0; x < 40; x++){
 					result.next();
 					int res = result.getInt(1);
 					//TEST DISPLAY VALUE
