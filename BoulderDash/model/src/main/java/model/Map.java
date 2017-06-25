@@ -1,8 +1,14 @@
 package model;
 
 import java.io.IOException;
-
 import model.dao.Connection;
+
+/**
+ * <h1>The Class Map</h1>
+ *
+ * @author Hugo, Théo, Eva and Geoffrey
+ * @version 1.0
+ */
 
 public class Map implements IMap{
 	private IElement[][] mapLevel;
