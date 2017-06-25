@@ -5,7 +5,7 @@ import java.awt.Point;
 import model.dao.Connection;
 
 public class Map implements IMap{
-	private IElement[][] mapLevel;
+	private IElement[][] mapLevel1;
 	static private int line = 40;
 	static private int colomn = 22;
 	static private int levelId = 1;
@@ -17,7 +17,7 @@ public class Map implements IMap{
 		public void fillMapLevel(){
 			
 		Connection connect = new Connection();
-		this.mapLevel = new Element[line][colomn];
+		this.mapLevel1 = new Element[line][colomn];
 		int[][] table = new int[line][colomn];
 		connect.getMapByLevelId(levelId, table);
 		
@@ -26,7 +26,7 @@ public class Map implements IMap{
 			for(int j = 0; j < colomn; j++){
 					int id = table[i][j];
 				Point position = new Point(i, j);
-				mapLevel[i][j] = new Element(id);
+				mapLevel1[i][j] = new Element(id);
 				
 			}	
 		}
@@ -35,11 +35,11 @@ public class Map implements IMap{
 
 	
 	public void setTable(Element[][] table) {
-		this.mapLevel = table;
+		this.mapLevel1 = table;
 	}
 
 	public IElement[][] getTable() {
-		return mapLevel;
+		return mapLevel1;
 	}
 
 	public synchronized static int getLine() {
@@ -51,6 +51,6 @@ public class Map implements IMap{
 	}
 	
 	public synchronized IElement getValue(int a, int b){
-		return mapLevel[a][b];
+		return mapLevel1[a][b];
 	}
 }
