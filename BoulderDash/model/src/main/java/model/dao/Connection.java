@@ -11,6 +11,8 @@ public class Connection {
 	private String                  password = "";
 	private String                  url      = "jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC";
 
+	
+	//aaaaaaaa
 	public int map [][] = new int [40][22];
 	public int[][] getMapByLevelId (int idLevel, int resultTab[][]){
 		try{
