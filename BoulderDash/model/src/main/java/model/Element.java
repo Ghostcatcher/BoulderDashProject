@@ -41,6 +41,12 @@ public class Element implements IElement {
 		return this.id;
 	}
 
+	/**
+	 *The method to display the sprite with the Id of the element
+	 *
+	 * @param id
+     *            The id of the object
+	 */
 	public BufferedImage idSprite(int id) throws IOException{
 		switch (id)
 		{
