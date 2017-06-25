@@ -24,20 +24,19 @@ public class Panel extends JPanel implements Observer {
 	
 	public void paintComponent(Graphics g){
 		
-		for(int i = 1; i <= 22; i++){
-			for(int j = 1; j <= 22; j++){
+		for(int i = 0; i < 40; i++){
+			for(int j = 0; j <= 22; j++){
 				//g.drawImage(this.model.getMap().getTable()[j][i].getImage(), j*16+16, i*16+16, this);
 				System.out.println("values map :" + this.model.getMap());
 				System.out.println("values map and table :" + this.model.getMap().getTable());
-				System.out.println("values map, table and image :" + this.model.getMap().getTable()[j][i].getImage());
+				System.out.println("values map, table and image :" + this.model.getMap().getTable()[i][j].getImage());
 				System.out.println("j : " + j);
 				System.out.println("i :" + i);
 				
-				g.drawImage(this.model.getMap().getTable()[j][i].getImage(), j*16+16, i*16+16, this);
+				g.drawImage(this.model.getMap().getTable()[i][j].getImage(), i*16+16, j*16+16, this);
 				//g.drawImage(model.getMap().getTable()[j][i].getImage().getSubimage(0, 0, 16, 16), j*16, i*16, this);
 			}
 		}
-		
 	}
 	
 	
@@ -52,7 +51,8 @@ public class Panel extends JPanel implements Observer {
 	
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
+		
+		this.repaint();
 		
 	}
 }

@@ -7,7 +7,9 @@ import java.awt.Point;
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
- */public class Background extends Static {
+ */
+
+public class Background extends Static {
 
 	 public Background(int id, Point position) {
 		 super(id, position);

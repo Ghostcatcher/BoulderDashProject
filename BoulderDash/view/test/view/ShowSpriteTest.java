@@ -3,6 +3,12 @@ package view;
 import static org.junit.Assert.*;
 
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -44,13 +50,27 @@ public class ShowSpriteTest {
      * 
    * @param g
      *			  Graphic object to paint on a component
+	 * @throws IOException 
      *
      */
 	
 	@Test
-	public Graphics paintTest(Graphics g) {
+	public void paintTest() throws IOException {
 		
-		return this.g;
+		Point position = new Point();
+		position.x = 14;
+		position.y = 5;
+		
+		int posX = 0;
+		int posY = 0;
+		
+		ShowSprite showSprite = new ShowSprite(1, posX, posY, position);
+		
+		BufferedImage img ;
+		
+		img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
+		BufferedImage subimage = img.getSubimage(posX, posY, 16, 16);
+		g.drawImage(subimage, position.x , position.y, null);
 		
 	}
 }
