@@ -25,7 +25,7 @@ public class Panel extends JPanel implements Observer {
 	public void paintComponent(Graphics g){
 		
 		for(int i = 0; i < 40; i++){
-			for(int j = 0; j <= 22; j++){
+			for(int j = 0; j < 22; j++){
 				//g.drawImage(this.model.getMap().getTable()[j][i].getImage(), j*16+16, i*16+16, this);
 				System.out.println("values map :" + this.model.getMap());
 				System.out.println("values map and table :" + this.model.getMap().getTable());
