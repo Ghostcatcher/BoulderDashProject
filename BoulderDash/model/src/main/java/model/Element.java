@@ -20,7 +20,6 @@ public class Element implements IElement {
 	public Element(int id){
 		try{
 			this.id = id;
-			this.id = id;
 			this.img = idSprite(id);
 		}
 
@@ -45,7 +44,7 @@ public class Element implements IElement {
 	 *The method to display the sprite with the Id of the element
 	 *
 	 * @param id
-     *            The id of the object
+	 *            The id of the object
 	 */
 	public BufferedImage idSprite(int id) throws IOException{
 		switch (id)
