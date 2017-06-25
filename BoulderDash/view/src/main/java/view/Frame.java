@@ -21,8 +21,8 @@ public class Frame extends JFrame {
  */
 	
 	public Frame(IModel model){
-		this.setTitle("Window");
-		this.setSize(720,480);
+		this.setTitle("Boulderdash");
+		this.setSize(680,430);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
