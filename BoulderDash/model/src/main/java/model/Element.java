@@ -18,10 +18,19 @@ public class Element implements IElement {
 	private BufferedImage image;
 	private BufferedImage img;
 	
-	public Element(int id) throws IOException{
-		this.id = id;
+	public Element(int id){
+		
+		
+		try{
+				this.id = id;
 		this.img = ImageIO.read(new File("C:\\Users\\Ghost64\\Documents\\GitHub\\BoulderDashProject\\BoulderDash\\model\\sprites\\blocks.png"));
 		this.image = img.getSubimage(32, 0, 16, 16);
+		}
+		
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	
 		
 	}
 	

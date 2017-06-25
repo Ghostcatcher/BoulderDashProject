@@ -37,4 +37,3 @@ public class Connection {
 		return resultTab;
 	}
 }
-

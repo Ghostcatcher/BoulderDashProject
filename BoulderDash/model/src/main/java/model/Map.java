@@ -1,5 +1,6 @@
 package model;
 
+import java.awt.Point;
 import java.io.IOException;
 
 
@@ -23,15 +24,19 @@ public class Map implements IMap{
 	}
 	
 		public void fillMapLevel(){
+			
 		Connection connect = new Connection();
 		this.mapLevel = new Element[line][colomn];
 		int[][] table = new int[line][colomn];
 		connect.getMapByLevelId(levelId, table);
+		
 		for(int i = 0; i < line; i++){
+			
 			for(int j = 0; j < colomn; j++){
+					int id = table[i][j];
 				Point position = new Point(i, j);
-				int id = table[i][j];
-				mapLevel[i][j] = new Element(id, position);
+				mapLevel[i][j] = new Element(id);
+				
 			}	
 		}
 	}
