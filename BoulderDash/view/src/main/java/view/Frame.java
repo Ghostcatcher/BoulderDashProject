@@ -72,10 +72,10 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 		tempTable = model.getMap().getTable();
 		int i = 0;
 		int y = 0;
-		for(int pd = 0; pd < 40; pd++){
+		for(int x = 0; x < 40; x++){
 			for(int j = 0; j < 22; j++){
-				if(tempTable[pd][j].getId() == 5){
-					i = pd;
+				if(tempTable[x][j].getId() == 5){
+					i = x;
 					y = j;
 					}
 				}
@@ -84,10 +84,13 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 		switch (e.getKeyCode()){
 		case 39:
 
-			if(tempTable[i+1][y].getId()!= 2 && tempTable[i][y+1].getId()!= 3){
+			if(tempTable[i+1][y].getId()!= 2 && tempTable[i+1][y].getId()!= 3){
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
+					if(tempTable[i+1][y].getId()== 6 || tempTable[i+1][y].getId()== 7){
+						System.exit(0);
+					}
 					tempTable[i+1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 48, 16, 16));
 					tempTable[i+1][y].setId(5);
 				} catch (IOException e1) {
@@ -96,10 +99,13 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 			}
 			break;
 		case 37:
-			if(tempTable[i-1][y].getId()!= 2 && tempTable[i][y+1].getId()!= 3){
+			if(tempTable[i-1][y].getId()!= 2 && tempTable[i-1][y].getId()!= 3){
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
+					if(tempTable[i-1][y].getId()== 6 || tempTable[i-1][y].getId()== 7){
+						System.exit(0);
+					}
 					tempTable[i-1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 16, 16, 16));
 					tempTable[i-1][y].setId(5);
 				} catch (IOException e1) {
@@ -112,6 +118,9 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
+					if(tempTable[i][y+1].getId()== 6 || tempTable[i][y+1].getId()== 7){
+						System.exit(0);
+					}
 					tempTable[i][y+1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(16, 64, 16, 16));
 					tempTable[i][y+1].setId(5);
 				} catch (IOException e1) {
@@ -124,6 +133,9 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
+					if(tempTable[i][y-1].getId()== 6 || tempTable[i][y-1].getId()== 7){
+						System.exit(0);
+					}
 					tempTable[i][y-1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(48, 32, 16, 16));
 					tempTable[i][y-1].setId(5);
 				} catch (IOException e1) {

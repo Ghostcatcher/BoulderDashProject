@@ -9,8 +9,6 @@ package model;
  * A class that will define the physic/AI of the monsters
  */
 public class Monster extends Character{
-	Map mapLevel = new Map();
-
 	public Monster(int id) {
 		super(id);
 	}
