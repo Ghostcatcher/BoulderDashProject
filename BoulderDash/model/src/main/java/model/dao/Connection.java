@@ -35,10 +35,11 @@ public class Connection {
 		try{
 			java.sql.Connection connection = (java.sql.Connection) DriverManager.getConnection(this.url, this.user, this.password);
 			Statement statement = (Statement) ((java.sql.Connection) connection).createStatement();
-			ResultSet result = statement.executeQuery("CALL getMap1");
+			ResultSet result = statement.executeQuery("CALL getMap3");
 			for (int y = 0; y < 22; y++) {
 				for (int x = 0; x < 40; x++){
 					result.next();
+					@SuppressWarnings("unused")
 					int res = result.getInt(1);
 					//TEST DISPLAY VALUE
 					//System.out.println("x = " + x + " y = " + y + " elemId = " + res ); 

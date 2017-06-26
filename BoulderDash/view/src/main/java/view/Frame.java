@@ -88,7 +88,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
-					tempTable[i+1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(16, 48, 16, 16));
+					tempTable[i+1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 48, 16, 16));
 					tempTable[i+1][y].setId(5);
 				} catch (IOException e1) {
 					e1.printStackTrace();
@@ -100,7 +100,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
-					tempTable[i-1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(48, 32, 16, 16));
+					tempTable[i-1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 16, 16, 16));
 					tempTable[i-1][y].setId(5);
 				} catch (IOException e1) {
 					e1.printStackTrace();
@@ -112,7 +112,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
-					tempTable[i][y+1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 48, 16, 16));
+					tempTable[i][y+1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(16, 64, 16, 16));
 					tempTable[i][y+1].setId(5);
 				} catch (IOException e1) {
 					e1.printStackTrace();
@@ -124,7 +124,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				try {
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
-					tempTable[i][y-1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 80, 16, 16));
+					tempTable[i][y-1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(48, 32, 16, 16));
 					tempTable[i][y-1].setId(5);
 				} catch (IOException e1) {
 					e1.printStackTrace();

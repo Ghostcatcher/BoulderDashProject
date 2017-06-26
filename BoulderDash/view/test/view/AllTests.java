@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ ShowSpriteTest.class, ViewFacadeTest.class })
+@SuiteClasses({ ViewFacadeTest.class })
 public class AllTests {
 
 }
