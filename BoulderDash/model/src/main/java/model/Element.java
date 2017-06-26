@@ -7,7 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * <h1>The Class Element, mother class of Static and Mobile</h1>
+ * <h1>The Class Element, mother class of Static and Mobile </h1>
  *
  * @author Hugo, Théo, Eva and Geoffrey
  * @version 1.0
