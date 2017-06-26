@@ -77,8 +77,8 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 				if(tempTable[x][j].getId() == 5){
 					i = x;
 					y = j;
-					}
 				}
+			}
 		}
 
 		switch (e.getKeyCode()){
@@ -89,6 +89,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
 					if(tempTable[i+1][y].getId()== 6 || tempTable[i+1][y].getId()== 7){
+						System.out.println("Game over");
 						System.exit(0);
 					}
 					tempTable[i+1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 48, 16, 16));
@@ -104,6 +105,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
 					if(tempTable[i-1][y].getId()== 6 || tempTable[i-1][y].getId()== 7){
+						System.out.println("Game over");
 						System.exit(0);
 					}
 					tempTable[i-1][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(32, 16, 16, 16));
@@ -119,6 +121,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
 					if(tempTable[i][y+1].getId()== 6 || tempTable[i][y+1].getId()== 7){
+						System.out.println("Game over");
 						System.exit(0);
 					}
 					tempTable[i][y+1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(16, 64, 16, 16));
@@ -134,6 +137,7 @@ public class Frame extends JFrame implements IFrame, KeyListener{
 					tempTable[i][y].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png")).getSubimage(32, 128, 16, 16));
 					tempTable[i][y].setId(8);
 					if(tempTable[i][y-1].getId()== 6 || tempTable[i][y-1].getId()== 7){
+						System.out.println("Game over");
 						System.exit(0);
 					}
 					tempTable[i][y-1].setImage(ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png")).getSubimage(48, 32, 16, 16));

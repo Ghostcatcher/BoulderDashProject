@@ -24,10 +24,6 @@ public class Element implements IElement {
 		try{
 			this.id = id;
 			this.img = idSprite(id);
-			/*this.x = x;
-			this.y = y;
-			position.x=x;
-			position.y=y;*/
 		}
 
 		catch(Exception e){
