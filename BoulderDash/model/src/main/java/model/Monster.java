@@ -14,8 +14,8 @@ import view.ShowSprite;
 public class Monster extends Character{
 	Map mapLevel = new Map();
 
-	public Monster(int id, Point position) {
-		super(id, position);
+	public Monster(int id) {
+		super(id);
 	}
 
 	/**

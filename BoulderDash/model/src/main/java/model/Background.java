@@ -1,7 +1,5 @@
 package model;
 
-import java.awt.Point;
-
 /**
  * <h1>The Class Background</h1>
  *
@@ -13,8 +11,8 @@ import java.awt.Point;
 
 public class Background extends Static {
 
-	 public Background(int id, Point position) {
-		 super(id, position);
+	 public Background(int id) {
+		 super(id);
 		 // TODO Auto-generated constructor stub
 	 }
  }

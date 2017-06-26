@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Point;
+
 /**
  * <h1>The Interface IElement</h1>
  *
@@ -11,4 +13,6 @@ import java.awt.image.BufferedImage;
 
 public interface IElement {
 	public BufferedImage getImage();
+	public int getId();
+	public Point getPosition();
 }

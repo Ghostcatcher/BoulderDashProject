@@ -1,6 +1,5 @@
 package model;
 
-import java.awt.Point;
 
 /**
  * <h1>The Class Wall </h1>
@@ -11,8 +10,8 @@ import java.awt.Point;
 
 public class Wall extends Static {
 
-	public Wall(int id, Point position) {
-		super(id, position);
+	public Wall(int id) {
+		super(id);
 		// TODO Auto-generated constructor stub
 	}
 

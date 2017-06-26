@@ -2,9 +2,12 @@ package model;
 
 import java.awt.Point;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import controller.IController;
-import view.ShowSprite;
 /**
  * <h1>The Class Player</h1>
  *
@@ -13,9 +16,10 @@ import view.ShowSprite;
  */
 public class Player extends Character implements IController {
 	Map mapLevel = new Map();
+	
 
-	public Player(int id, Point position) {
-		super(id, position);
+	public Player(int id) {
+		super(id);
 	}
 	
 	/**
@@ -23,46 +27,58 @@ public class Player extends Character implements IController {
 	 * 
 	 * @param e
 	 *            This event occurs when a key press is followed by a key release       
+	 * @throws IOException 
 	 */
 	
-	public void Movement(KeyEvent e) throws InterruptedException {
-		Point p = getPosition().getLocation();
+	public void Movement(KeyEvent e) throws InterruptedException, IOException {
 		switch (e.getKeyCode()){
 		case KeyEvent.VK_RIGHT:
-			if(mapLevel.getValue(p.x+1, p.y).getValue() != 2){
-				new ShowSprite(1,32,128,p);
-				getPosition().setLocation(p.x+1, p.y);
-				new ShowSprite(2,48,64, p); 
+			if(map.getValue(position.x+1, position.y).getId()!= 2){
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+				this.image = img.getSubimage(32, 128, 16, 16);
+				getPosition().setLocation(position.x+1, position.y);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(48, 64, 16, 16);
 				Thread.sleep(100);
-				new ShowSprite(2,16,16, p);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(0, 0, 16, 16);
 			}
 
 			break;
 		case KeyEvent.VK_LEFT:
-			if(mapLevel.getValue(p.x-1, p.y).getId() != 2){
-				new ShowSprite(1,32,128,p);
-				getPosition().setLocation(p.x-1, p.y);
-				new ShowSprite(2,48,32, p); 
+			if(mapLevel.getValue(position.x-1, position.y).getId() != 2){
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+				this.image = img.getSubimage(32, 128, 16, 16);
+				getPosition().setLocation(position.x-1, position.y);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(48, 32, 16, 16);
 				Thread.sleep(100);
-				new ShowSprite(2,16,16, p);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(0, 0, 16, 16);
 			}
 			break;
 		case KeyEvent.VK_UP:
-			if(mapLevel.getValue(p.x, p.y+1).getId() != 2 && mapLevel.getValue(p.x, p.y+1).getId() != 3){
-				new ShowSprite(1,32,128,p);
-				getPosition().setLocation(p.x, p.y+1);
-				new ShowSprite(2,32,48, p); 
+			if(mapLevel.getValue(position.x, position.y+1).getId() != 2 && mapLevel.getValue(position.x, position.y+1).getId() != 3){
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+				this.image = img.getSubimage(32, 128, 16, 16);
+				getPosition().setLocation(position.x, position.y+1);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(32, 48, 16, 16);
 				Thread.sleep(100);
-				new ShowSprite(2,16,16, p);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(0, 0, 16, 16);
 			}
 			break;
 		case KeyEvent.VK_DOWN:
-			if(mapLevel.getValue(p.x, p.y-1).getId() != 2 && mapLevel.getValue(p.x, p.y-1).getId() != 3){
-				new ShowSprite(1,32,128,p);
-				getPosition().setLocation(p.x, p.y-1);
-				new ShowSprite(2,32,80, p); 
+			if(mapLevel.getValue(position.x, position.y-1).getId() != 2 && mapLevel.getValue(position.x, position.y-1).getId() != 3){
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
+				this.image = img.getSubimage(32, 128, 16, 16);
+				getPosition().setLocation(position.x, position.y-1);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(32, 80, 16, 16);
 				Thread.sleep(100);
-				new ShowSprite(2,16,16, p);
+				this.img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
+				this.image = img.getSubimage(0, 0, 16, 16);
 			}
 			break;
 		}

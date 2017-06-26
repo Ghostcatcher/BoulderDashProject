@@ -1,7 +1,5 @@
 package model;
 
-import java.awt.Point;
-
 /**
  * <h1>The Class Rock</h1>
  *
@@ -11,8 +9,8 @@ import java.awt.Point;
  */
 public class Rock extends GravityElement{
 
-	public Rock(int id, Point position) {
-		super(id, position);
+	public Rock(int id) {
+		super(id);
 		// TODO Auto-generated constructor stub
 	}
 }

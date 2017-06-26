@@ -1,7 +1,5 @@
 package model;
 
-import java.awt.Point;
-
 /**
  * <h1>The Class GravityElement, mother class of Diamond and Rocks</h1>
  *
@@ -10,8 +8,8 @@ import java.awt.Point;
  */
 public class GravityElement extends Mobile{
 
-	public GravityElement(int id, Point position) {
-		super(id, position);
+	public GravityElement(int id) {
+		super(id);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -56,14 +56,14 @@ public class ShowSprite extends JFrame implements IShowSprite{
 		try {
 			
 			if (choice == 1){
-				img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
+				img = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\blocks.png"));
 				System.out.println("choice2 : " + choice);
 			}
 				
 		
 			
 			else{
-				img2 = ImageIO.read(new File("/model/sprites/player.png"));
+				img2 = ImageIO.read(new File("C:\\Users\\Hugo\\Desktop\\player.png"));
 			}
 				
 			

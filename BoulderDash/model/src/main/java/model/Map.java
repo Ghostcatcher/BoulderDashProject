@@ -1,6 +1,8 @@
 
 package model;
 
+import java.awt.Point;
+
 import model.dao.Connection;
 
 /**
@@ -22,9 +24,7 @@ public class Map implements IMap{
 		this.fillMapLevel();
 	}
 	
-	
 	/**
-	* 
 	* The methods that fills the second 2d table with data from the first one
 	* 
 	*/
