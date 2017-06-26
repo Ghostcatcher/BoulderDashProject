@@ -106,6 +106,12 @@ public class Element implements IElement {
 		}
 		return image;
 	}
+
+	@Override
+	public void setId(int id) {
+		this.id = id;
+		
+	}
 }
 
 

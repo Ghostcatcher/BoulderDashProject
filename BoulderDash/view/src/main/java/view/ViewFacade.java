@@ -11,28 +11,35 @@ import model.IModel;
  */
 public class ViewFacade implements IView {
 
-    /**
-     * Instantiates a new view facade.
-     */
-	
-	Frame frame;
-    public ViewFacade() {
-        super();
-    }
+	/**
+	 * Instantiates a new view facade.
+	 */
 
-    /*
-     * (non-Javadoc)
-     * @see view.IView#displayMessage(java.lang.String)
-     */
-    @Override
-    public final void displayMessage(final String message) {
-    	
-        JOptionPane.showMessageDialog(null, message);
-        
-    }
-    
-    public void startFrame(IModel model){
-    	this.frame = new Frame(model);
-    }
-    
+	Frame frame;
+	public ViewFacade() {
+		super();
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * @see view.IView#displayMessage(java.lang.String)
+	 */
+	@Override
+	public final void displayMessage(final String message) {
+
+		JOptionPane.showMessageDialog(null, message);
+
+	}
+
+	public Frame getFrame() {
+		return frame;
+	}
+
+	public void setFrame(Frame frame) {
+		this.frame = frame;
+	}
+
+	public void startFrame(IModel model){
+		this.frame = new Frame(model);
+	}
 }

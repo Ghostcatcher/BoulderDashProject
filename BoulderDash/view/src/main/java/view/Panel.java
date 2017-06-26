@@ -17,14 +17,18 @@ import model.IModel;
  */
 
 public class Panel extends JPanel implements Observer {
-	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6480438925747987256L;
 	IModel model;
-	
+
 	public Panel(IModel model){
 		this.model = model;
 	}
-	
-	
+
+
 	/** 
 	 * 
 	 * A method that will add objects to the panel
@@ -33,36 +37,28 @@ public class Panel extends JPanel implements Observer {
 	 *				 a Graphics object that stores informations needed for basic rendering operations 
 	 */
 	public void paintComponent(Graphics g){
-		
+
 		for(int i = 0; i < 40; i++){
 			for(int j = 0; j < 22; j++){
-				//g.drawImage(this.model.getMap().getTable()[j][i].getImage(), j*16+16, i*16+16, this);
-				System.out.println("values map :" + this.model.getMap());
-				System.out.println("values map and table :" + this.model.getMap().getTable());
-				System.out.println("values map, table and image :" + this.model.getMap().getTable()[i][j].getImage());
-				System.out.println("j : " + j);
-				System.out.println("i :" + i);
-				
 				g.drawImage(this.model.getMap().getTable()[i][j].getImage(), i*16+16, j*16+16, this);
-				//g.drawImage(model.getMap().getTable()[j][i].getImage().getSubimage(0, 0, 16, 16), j*16, i*16, this);
 			}
 		}
 	}
-	
-	
+
+
 	/**
 	 *A method to update the observable
 	 *
 	 * @param o
-     *            Observable object
-     * @param arg
-     * 			  Argument to notify the observer
+	 *            Observable object
+	 * @param arg
+	 * 			  Argument to notify the observer
 	 */
-	
+
 	@Override
 	public void update(Observable o, Object arg) {
-		
+
 		this.repaint();
-		
+
 	}
 }

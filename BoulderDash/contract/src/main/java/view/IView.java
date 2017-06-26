@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Frame;
+
 import model.IModel;
 
 /**
@@ -19,4 +21,5 @@ public interface IView {
     void displayMessage(String message);
     
     void startFrame(IModel model);
+    public Frame getFrame();
 }

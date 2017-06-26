@@ -38,13 +38,23 @@ public class ControllerFacade implements IController {
      *
      * @throws SQLException
      *             the SQL exception
+     * @throws InterruptedException 
      */
-    public void start() throws SQLException {
+    public void start() throws SQLException, InterruptedException {
     	this.view.startFrame(this.model);
+    	gameLoop();
     	
     	
     }
+    public void gameLoop() throws InterruptedException{
+    	while(true){
+    	Thread.sleep(200);
+    	this.view.getFrame().revalidate();
+    	this.view.getFrame().setSize(680, 425);
+    	this.view.getFrame().setSize(680, 420);
+    	}
 
+    }
     /**
      * Gets the view.
      *

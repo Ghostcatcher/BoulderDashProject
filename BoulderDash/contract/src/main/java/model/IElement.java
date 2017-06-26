@@ -14,5 +14,7 @@ import java.awt.image.BufferedImage;
 public interface IElement {
 	public BufferedImage getImage();
 	public int getId();
+	public void setId(int id);
 	public Point getPosition();
+	public void setImage(BufferedImage image);
 }
