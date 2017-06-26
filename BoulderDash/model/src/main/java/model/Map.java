@@ -47,7 +47,7 @@ public class Map implements IMap{
 
 
 	
-	public void setTable(Element[][] table) {
+	public void setTable(IElement[][] table) {
 		this.mapLevel = table;
 	}
 

@@ -10,5 +10,5 @@ package model;
 public interface IMap {
 	
 	public IElement[][] getTable();
-	
+	public void setTable(IElement[][] table);
 }

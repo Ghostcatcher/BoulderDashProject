@@ -1,7 +1,5 @@
 package model;
 
-import java.awt.Point;
-
 /**
  * <h1>The Class Mobile, mother class of Characters and GravityElement</h1>
  *
