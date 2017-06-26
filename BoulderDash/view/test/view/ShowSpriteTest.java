@@ -25,6 +25,10 @@ import org.junit.Test;
 
 public class ShowSpriteTest {
 	
+	int posX ;
+	int posY ;
+	private Graphics g;
+	private Point position;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -34,7 +38,7 @@ public class ShowSpriteTest {
 	public static void tearDownAfterClass() throws Exception {
 	}
 
-	private Graphics g;
+	
 
 	@Before
 	public void setUp() throws Exception {
@@ -60,16 +64,24 @@ public class ShowSpriteTest {
 		Point position = new Point();
 		position.x = 14;
 		position.y = 5;
+		posX = 3;
+		posY = 10;
 		
-		int posX = 0;
-		int posY = 0;
 		
-		ShowSprite showSprite = new ShowSprite(1, posX, posY, position);
+		ShowSprite showSprite = new ShowSprite(1, 15, 14, position);
+		
+		this.position = position;
 		
 		BufferedImage img ;
 		
 		img = ImageIO.read(new File("C:\\Users\\Ghost64\\Desktop\\images\\blocks.png"));
-		BufferedImage subimage = img.getSubimage(posX, posY, 16, 16);
+		BufferedImage subimage = img.getSubimage(2, 4, 16, 16);
+		System.out.println("subimage : " + subimage);
+		System.out.println("position x : " + position.x);
+		System.out.println("position y : " + position.y);
+		System.out.println("posX : " + posX);
+		System.out.println("posY : " + posY);
+		
 		g.drawImage(subimage, position.x , position.y, null);
 		
 	}
